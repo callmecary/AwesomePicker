@@ -1,0 +1,63 @@
+@model IEnumerable<AwesomePicker.Models.Stock>
+
+@{
+    ViewData["Title"] = "PEAD";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Action)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Open)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PreviousClose)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Moving)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Past90dayMoving)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AsofDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Action)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Open)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreviousClose)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Moving)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Past90dayMoving)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AsofDate)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

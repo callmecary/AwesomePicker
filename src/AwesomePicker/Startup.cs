@@ -35,6 +35,8 @@ namespace AwesomePicker
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
+
+            DocumentDBRepository<Stock>.Initialize();
         }
 
         public IConfigurationRoot Configuration { get; }
