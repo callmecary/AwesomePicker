@@ -18,7 +18,7 @@ namespace AwesomePicker
 
         public static void Initialize()
         {
-            client = new DocumentClient(new Uri("https://lmadev.documents.azure.com:443/"), "key");
+            client = new DocumentClient(new Uri("https://lmadev.documents.azure.com:443/"), "");
             CreateDatabaseIfNotExistsAsync().Wait();
             CreateCollectionIfNotExistsAsync().Wait();
         }

@@ -41,10 +41,30 @@ def get_pead_quotes(date):
 
         if(abs(todaysmoving)>std_dv90days):
             if(todaysmoving>0):
-                pead_results.append({'symbol':interestingQuote['symbol'],'action':'Long'})
+                pead_results.append({
+                                     'documentType': 'stockByStrategy',
+                                     'asofDate': date.strftime("%Y-%m-%d"),
+                                     'symbol':interestingQuote['symbol'],
+                                     'open': today_open,
+                                     'pre_close':previous_close,
+                                     'moving':todaysmoving,
+                                     'past90daymoving':std_dv90days,
+                                     'action':'Long',
+                                     'strategy': 'PEAD'
+                                    })
                 #print(interestingQuote['symbol']+' Long '+str(todaysmoving)+' '+str(std_dv90days))
             else:
-                pead_results.append({'symbol':interestingQuote['symbol'],'action':'Short'})
+                pead_results.append({
+                                     'documentType': 'stockByStrategy',
+                                     'asofDate': date.strftime("%Y-%m-%d"),
+                                     'symbol':interestingQuote['symbol'],
+                                     'open': today_open,
+                                     'pre_close':previous_close,
+                                     'moving':todaysmoving,
+                                     'past90daymoving':std_dv90days,
+                                     'action':'Short',
+                                     'strategy': 'PEAD'
+                                    })
                 #print(interestingQuote['symbol']+' Short '+str(todaysmoving)+' '+str(std_dv90days))
         
     return pead_results
@@ -52,7 +72,8 @@ def get_pead_quotes(date):
 
 
 def main():
-    date = datetime.date(2016,12,6)
+    #date = datetime.date(2016,12,6)
+    date = datetime.datetime.today()
     pead_results = get_pead_quotes(date)
     print(pead_results)
 

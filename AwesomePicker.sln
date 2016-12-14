@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AwesomePicker", "src\AwesomePicker\AwesomePicker.xproj", "{BE9BB898-E2C6-438A-A9C7-D4F5E417AD52}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonWebJob", "PythonWebJob\PythonWebJob.pyproj", "{72C6B26B-E84E-4C1D-AE03-440D7C1AB8C5}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonWebJob", "src\PythonWebJob\PythonWebJob.pyproj", "{72C6B26B-E84E-4C1D-AE03-440D7C1AB8C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
